@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>controle de tarefas</h1>
+
+  <div class="input-group">
+    <input [(ngModel)]="newTask" type="text" placeholder="escreva sua tarefa" />
+    <button (click)="addTask()">Adicionar</button>
+  </div>
+  <ul>
+    <li *ngFor="let task of tasks; let i = index">
+      {{ task }}
+      <button (click)="removeTask(i)">Remover</button>
+    </li>
+  </ul>
+
+  <button (click)="saveTasks()" style="margin-top: 20px;">Salvar Lista</button>
+</div>
